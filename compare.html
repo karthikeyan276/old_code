@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compare</title>
+</head>
+<body>
+    <script>
+         let mobile = [
+            { MobileName: "lenovo", Price: 20000, AvailableQuantity: 10 },
+            {
+                MobileName: "RedMI",
+                Price: 25000,
+                AvailableQuantity: 4
+            },
+            {
+                MobileName: "RealME",
+                Price: 15000,
+                AvailableQuantity: 6
+            },
+            {
+                MobileName: "MOTO",
+                Price: 20000,
+                AvailableQuantity: 1
+            },
+            {
+                MobileName: "Nokia",
+                Price: 15000,
+                AvailableQuantity: 0
+            },
+            {
+                MobileName: "OnePlus",
+                Price: 40000,
+                AvailableQuantity: 22
+            },
+
+            {
+                MobileName: "IPhone",
+                Price: 20000,
+                AvailableQuantity: 3
+            }];
+
+
+
+            let phone = [
+            { MobileName: "Samsung", Price: 20000, AvailableQuantity: 10 },
+            {
+                MobileName: "acer",
+                Price: 25000,
+                AvailableQuantity: 4
+            },
+            {
+                MobileName: "RealME",
+                Price: 15000,
+                AvailableQuantity: 6
+            },
+            {
+                MobileName: "MOTO",
+                Price: 20000,
+                AvailableQuantity: 1
+            },
+            {
+                MobileName: "Nokia",
+                Price: 15000,
+                AvailableQuantity: 0
+            },
+            {
+                MobileName: "OnePlus",
+                Price: 40000,
+                AvailableQuantity: 22
+            },
+
+            {
+                MobileName: "IPhone",
+                Price: 20000,
+                AvailableQuantity: 3
+            }];
+
+      
+
+
+let valuesA = mobile.reduce((mobile,{MobileName}) => 
+                    Object.assign(mobile, {[MobileName]:MobileName}), {});
+let valuesB = phone.reduce((mobile,{MobileName}) => 
+                    Object.assign(mobile, {[MobileName]:MobileName}), {});
+let result = [...mobile.filter(({MobileName}) => !valuesB[MobileName]), ...phone.filter(({MobileName}) => !valuesA[MobileName])];
+console.log(result);
+
+const results = mobile.filter(function(o1){
+    return !phone.some(function(o2){
+        return o1.MobileName == o2.MobileName
+        return o2.MobileName == o1.MobileName
+    });
+});
+console.log(results);
+
+// seeker_id: seekers.map((ele)=>ele.type == 'applied' & ele),
+//         job_id:jobs.map((c)=>c.type == "applied")
+
+
+let findSeeker = []
+
+function blocked(remov,ss){
+
+  blockedSeekers.map((remov)=>{
+      //console.log(remov);
+      jobs.map((ss)=>{
+          remov.job_title != ss.provider_id  &&  findSeeker.push(ss.provider_id) 
+      })
+
+  })
+}
+
+blocked()
+console.log(findSeeker);
+        </script>
+</body>
+</html>

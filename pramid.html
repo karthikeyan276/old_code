@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pramid</title>
+</head>
+
+<body>
+  <script>
+
+
+    let n = 5, i, j, n1 = 1, space;
+
+    space = n - 1;
+
+    //console.log(space);
+
+    for (j = 1; j <= n; j++) {
+
+      n1 = j;
+      // console.log(j);
+      // console.log(j++);
+
+
+
+      for (i = 1; i <= space; i++)
+
+        document.write("&nbsp;");
+
+      space--;
+
+      //document.write(space--);//given space in starting 
+
+      for (i = 1; i <= j; i++)
+      //console.log(i <= j);
+      {
+        //console.log(n1);
+
+        document.write(n1);
+
+        n1++;// adding n1+1
+
+        //console.log(n1++);
+
+      }
+
+      n1--;//456786 ,34565 like output  so decrement used
+
+      //console.log(n1--);//1-5
+
+      n1--;//n++ output is 4567876 so used
+
+      //console.log(n1--);//0-4
+
+      for (i = 1; i < j; i++) {
+
+        document.write(n1);
+
+        n1--;//56789891011 ++ increment so use decrement
+
+      }
+
+      document.write("<br>");
+
+    }
+  </script>
+</body>
+
+</html>

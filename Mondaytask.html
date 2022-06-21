@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    <script>
+//boobathi anna
+// let text = "karthi";
+// let result = text.repeat(4);
+// console.log(result);
+
+
+
+//mask task 1
+const num = 9362613559;
+const str2 = num.toString();
+
+
+
+console.log(MaskCharacter(str2,'*'));
+
+console.log(str2);
+
+
+function MaskCharacter(str,mask, n=-3){
+    return ('' + str).slice(3,n).replace(/./g,mask)+(""+str).slice(6,-1);
+    //
+}
+
+
+//mask 2nd 
+let email = "siva.sakthivel@valorpaytech.com";
+
+mail = email.slice(0,2)+"***" + email.slice(email.indexOf("@"));
+
+console.log(mail);
+
+//1st task    Input : title_case       Output : TitleCase
+
+let stringg= 'title_case';
+
+console.log(stringg.replace(/(^|_)./g, 
+s => s.slice(-1).toUpperCase()));
+
+// task 1
+function capsss(str) {
+  var i, small = str.split('_');
+  for (i=0; i<small.length; i++) {
+    small[i] = small[i].charAt(0).toUpperCase() + small[i].slice(1);
+  }
+  return small.join('');
+}
+
+
+console.log(capsss('title_case'));
+
+//taskk2    Input : titleCase  Output : TitleCase
+
+let someString = 'titleCase';
+
+someString = someString.charAt(0).toUpperCase() + someString.slice(1);
+
+console.log(someString);
+
+
+function change(wer="titleCase"){
+    wer = wer.split(" ")
+    wer = wer.toLowerCase();
+
+for(var i=0;i<wer.length;i++){
+
+    wer[i] = wer[i].charAt(0).toUpperCase()+wer[i].slice(1);
+    
+}
+
+var con = wer.join("");
+
+console.log(con);
+}
+
+
+//task3    Input : TITLE_CASE   Output : TitleCase
+
+let removeun = "TITLE_CASE";
+
+ let upperr = removeun.indexOf("_");
+console.log( removeun[0] +removeun.slice(1, upperr).toLowerCase() +removeun[upperr + 1] +removeun.slice(upperr + 2).toLowerCase());  
+
+
+
+function taskk01(testing = "TITLE_CASE"){    
+
+testing=testing.toLowerCase();
+
+ testing=testing.replace("_"," ");
+
+ testing=testing.split(" ");   
+
+ for(var i=0;i<testing.length;i++){
+
+ testing[i]=testing[i].charAt(0).toUpperCase()+testing[i].slice(1);
+
+     }
+
+  var out = testing.join("");   
+
+   console.log(out);                    
+       }
+       taskk01();
+
+
+
+//task4   Input : SnakeCase      Output : snake_case
+
+const task4 = 'BmwAudi';
+const task = task4.split(/(?=[A-Z])/).join('_').toLowerCase();
+console.log(task);
+
+//taskk4 or
+const task41 = "Bmw";
+const tas = "Audi";
+
+const abc = [1234];
+const ba = [23];
+const we = abc.concat(ba);
+document.write(we);
+
+const te = task41.concat(tas);
+console.log(te); //BmeAudi
+const task1 = task41.concat(tas).split(/(?=[A-Z])/).join('_').toLowerCase();;
+let vara = task1
+console.log(vara);
+console.log(task1);
+
+//task5    Input : SNAKE_CASE     Output : snake_case
+let lower = 'SNAKE_CASE';
+
+console.log(lower.toLowerCase());
+//5
+
+
+function named(tit="SNAKE_CASE"){
+    tit = tit.split(" ");
+
+    for(var m=0;m<tit.length;m++){
+
+        tit[m]=tit[m].toLowerCase();
+
+    }
+    var tom = tit.join(" ");
+        console.log(tom);
+}
+
+named();
+
+
+//task6    Input : camel_case               Output : camelCase
+   
+var string= 'camel_case';
+
+console.log(string.replace(/(^|_)./g, s => s.slice(-1).toUpperCase()));
+//
+
+function names(wer){
+    if(typeof wer ==='string'){
+        return wer.charAt(0) + wer.slice(1)
+    }
+}
+
+console.log(names("camel_case"));
+
+
+function camal(typed ){
+
+    typed = typed.toLowerCase();
+    typed = typed.replace("_","");
+    typed = typed.split(" ");
+
+    for(var l=0; l<typed.length;l++){
+        typed[l]= typed[l].charAt(0).toUpperCase()+typed[l].slice(1);
+
+    }
+    var e2 = typed.join("");
+    console.log("s",camal("camel_case"));
+}
+
+
+
+
+//task7    Input : CamelCase      Output : camelCase
+
+let first = "CamelCase";
+
+firstll = first.charAt(0).toLowerCase() + first.slice(1);
+
+console.log(firstll);
+
+
+function change(we){
+    if(typeof we === 'string') {
+                return we.charAt(0).toLowerCase() + we.slice(1);
+        }
+
+    }
+
+    console.log(change('CamelCase'));
+
+
+//task 8  Input : CAMEL_CASE        Output : camelCase      
+function camel(one){
+
+one=one.replace("_"," ");
+
+one=one.split(" ");
+
+one[0]=one[0].toLowerCase();
+
+one[1]=one[1].charAt(0).toUpperCase()+one[1].slice(1).toLowerCase();
+
+return(one.join(""));
+
+}
+
+console.log(camel("CAMEL_CASE"));
+
+
+//task 9
+
+function taskk(){
+    var search = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        var hello= search.includes("valor" );
+
+if(hello == true){
+    console.log("string found");
+}
+else{
+    console.log("string not found");
+}
+        }
+taskk()
+
+    </script>
+</body>
+</html>

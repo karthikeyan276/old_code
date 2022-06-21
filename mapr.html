@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+
+<body>
+    <script>
+        const str = 'karthi';
+        //str strore karthi its run 6 times loop 
+        for (const value of str) {
+            console.log(value);
+
+        }
+
+        const arra = [
+            { key: "", value: 10 },
+            { key: 2, value: 20 }
+        ];
+        const re = arra.map(({ key, value }) => ({ [key]: value }))
+        console.log(re);
+        //lessthan
+        const numbers = [1, 2, 2, 3, 4];
+        const filte = numbers.map((num, index) => {
+            if (index < 2) {
+                return num
+            }
+        })
+        console.log(filte);
+
+        let an = ["karthi"];
+        let as = an.map((x) => x.split(""))
+        console.log(as);
+
+
+        let name = ["karthi", "mathan", "parthi"];
+        const inla = (ele) => ele == "mathan";
+        //console.log(name.findIndex(inla));
+
+        const nme = name.map((x) => {
+
+
+            return x.name == "karthi";
+
+        })
+        //console.log(name.findIndex(nme));
+        let mobile = [
+            { MobileName: "Samsung", Price: 20000, AvailableQuantity: 10 },
+            {
+                MobileName: "RedMI",
+                Price: 25000,
+                AvailableQuantity: 4
+            },
+            {
+                MobileName: "RealME",
+                Price: 15000,
+                AvailableQuantity: 6
+            },
+            {
+                MobileName: "MOTO",
+                Price: 20000,
+                AvailableQuantity: 1
+            },
+            {
+                MobileName: "Nokia",
+                Price: 15000,
+                AvailableQuantity: 0
+            },
+            {
+                MobileName: "OnePlus",
+                Price: 4000,
+                AvailableQuantity: 22
+            },
+
+            {
+                MobileName: "IPhone",
+                Price: 20000,
+                AvailableQuantity: 3
+            }];
+
+        const task40 = mobile.filter((y) =>{   
+         
+            let out = y.Price > 15000
+            console.log(out);
+//             
+            return out;
+          })
+        console.log("Mobile=>", task40);
+
+        // const task4 = mobile.filter((ele)=>{return ele.Price > 15000 ? ele : ele})
+        // console.log(task4);
+
+
+
+
+
+        let Original = [{
+
+            ...mobile,
+            MobileName: "ddd",
+            Price: 45000,
+            AvailableQuantity: 0
+        },
+        {
+            MobileName: "aaaa",
+            Price: 75000,
+            AvailableQuantity: 5
+        }]
+
+        console.log(Original);
+        
+        let newaa = mobile.concat(Original)
+        //console.log("add", newaa);
+
+
+        const task41 = mobile.filter((x) => x.Price === 20000)
+            .map(z => z.MobileName)
+
+        console.log(task41);
+
+        //removing array 
+        remov = mobile.filter(d => d.name != 'MOTO');
+        console.log(remov);
+
+
+        let task = mobile.map((ele) => {
+            //console.log(ele);
+            if (ele.MobileName == 'Samsung') {
+
+                return { ...ele, MobileName: null }
+            }
+            else {
+                return ele
+            }
+//[true,false,false]
+           //return ele.MobileName == 'Samsung' //true or false
+            });
+        console.log(task);
+
+
+
+        // let remin = mobile.filter(d=>d.MobileName != 'MOTO');
+        // console.log(remin);
+
+
+        let nes = mobile.filter(function (remov) {
+            return remov.MobileName != "MOTO";
+        })
+        console.log(nes);
+
+        //task 4
+
+        // let newA = [];
+        // let object = {};
+
+        // for(let i in mobile){
+        //     objPrice = mobile[i]['Price'];
+        // object[objPrice] = mobile[i];
+        // }
+        // for (i in object){
+        //     newA.push(object[i])
+        // }
+        // console.log(newA);
+
+
+
+        // let dubb = mobile.filter((c,index)=>{
+        //     return mobile.indexOf(c) !==index;
+        // })
+        // console.log(dubb);
+        
+        
+//[10000,20000,10000]
+/**1st loop
+ *uniq=[] 
+ *empty=[10000] 
+ *dublicate=[10000] 
+ */
+/**2nd loop
+ *uniq=[] 
+ *empty=[10000] 
+ *dublicate=[10000] 
+ */
+/**3rd loop
+ *uniq=[] 
+ *empty=[10000,20000] 
+ *dublicate=[10000,20000] 
+ */
+
+        const uniq = [];
+        const empty = [];
+        const dublicate = [];
+        
+
+        const uni = mobile.filter(element => {
+            const isdub = uniq.includes(element.Price);
+            console.log(isdub);
+
+            if (!isdub) {
+                uniq.push(element.Price);
+                return true
+            } else {
+                empty.push(element.Price)
+            }
+           console.log(uniq);
+            empty.filter(e=>{                
+                if(!dublicate.includes(e)){
+                    return dublicate.push(e)
+                }
+            })
+        })
+
+
+        dublicate.map(e=>{mobile.map(f=>{if(e===f.Price){
+                    console.log(f)
+                }
+            })
+        })
+        console.log(uni);
+        console.log(empty);
+        console.log(dublicate)
+    </script>
+</body>
+
+</html>

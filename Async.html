@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <script>
+        let stocks = {
+    Brand:["BMW" , "BENZ" , "ROLLS" , "FIAT"] ,
+    model:["I 8" , "x series" , "M series"],
+    price:["low to high " , "high to low"],
+    year:["2020" , "2019" ,"2022"]
+};
+
+let is_showroom_open= true;
+
+// async function order(){  
+//     try{
+//         await  setTimeout(()=>{
+
+//         },2000)
+//         }
+//     catch(error){
+//         console.log("abc is doesnot exit" , error);
+//     }
+//     finally{
+//         console.log("runs good");
+//     }
+// }
+
+// order()
+
+// .then(()=>{
+//     console.log("example");
+// });
+
+// var add = function add(num1,num2){
+
+//   num1 = num1 || 10;
+
+//   return num1 + num2;
+
+//   num2 = num2 ? num2 : 11;
+
+//   return num1 + num2;
+
+// }
+
+// console.log(add());
+
+
+// argument pass default values set 
+
+// function funca(a, b){
+//    if (typeof(a)==='undefined') a = 10;
+//    if (typeof(b)==='undefined') b = 20;
+
+//    alert("A: "+a+" "+b);
+// }
+
+// funca();
+
+// const getData = async() =>{
+
+//   setTimeout(()=>{
+//     var y = await 
+
+//   },1000);
+
+//   console.log(y);
+
+// }
+
+// console.log(1);
+// getData();
+// console.log(2);
+
+// function add(a, b = 1) {
+//     return a + b;
+// }
+
+// console.log(add(1, 2));
+
+// default function
+// function add( b = undefined) {
+//     return  b;
+// }
+
+// console.log (add(10,undefined));
+
+const formulaA=(a,b)=>{
+  return a+b
+}
+const multiply=(a,b)=>{
+  return a*b
+}
+function excute(calb){
+    let a,b;
+    a=12;b=24;
+    return calb(a,b)
+}
+
+if("A+")
+console.log(excute(formulaA));
+ //karthick
+ if('B+')
+console.log(excute(multiply)); //siva
+
+function demo(){
+  return new Promise(resolve=>{
+    setTimeout(()=>{
+      resolve( ' yah its working normal');
+    },4000);
+  });
+  
+}
+
+async function abc(){
+  
+  console.log('call the server ');
+  const result = await demo();
+  console.log(result);
+  
+}
+
+ abc();
+console.log('sdfdfg');
+
+
+
+function myopt(availble_slots){
+
+availble_slots(100,200)
+
+}
+
+
+myopt (function(a,b){
+
+var a = 100;
+var b= 99;
+if(a>100 ){
+
+     console.log("your slots are ready ")
+
+}else if(a=100 && b>=11){
+
+  console.log("slots didnot avalible")
+
+}
+
+})
+
+    </script>
+</body>
+</html>

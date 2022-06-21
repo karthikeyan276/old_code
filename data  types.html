@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatypes</title>
+</head>
+
+<body>
+    <script> // \n is next line print the value \t is tab one tab 
+        // let data = 8;
+        // let name = "any";
+
+        // let num1 = 99292929292992n//bigint
+        // console.log(num1 + 2n);
+
+
+
+        // let too = 5 < 2;
+        // console.log(too);//typeof is you gived data its string or boolen identify
+
+
+        // let str = "welcome";
+        // let strr = "screen";
+        // let pharse = `can embeded another ${strr}`;
+
+
+        // console.log(`${str, strr, pharse}`);
+
+
+        // let arr = ["40001"];
+        // let max = ["100"];
+
+        // console.log(`${arr % max}`);
+
+        // console.log(10 ^ 50 ^ 121 ^ 23 - 1);
+
+        // console.log(str.substr(-7, 2));//substring
+        // console.log(pharse.length);//length
+        //varible used function create 
+
+        // function str1();
+        //        var x= function str1(){
+
+        //         }
+
+        //         var x = function stt(){
+        //             let x = 100;
+        //         }
+        //             console.log(x);
+        //         //console.log(str1('A\uD87E\uDC04Z'));
+        //         let v = 'karthi keyan';
+        //         let empty = '12';
+        //         console.log(v + ' is ' + v.length + ' code units long');
+
+        // let nam;
+        // console.log(nam);
+
+
+        // let value = Symbol('')
+
+        // console.log(value);
+
+        // let val = Symbol('Information logged')
+        // let val2 = Symbol('Information logged')
+
+        //console.log(val !== val2);
+
+        const fruits = {
+            "name": "apple", "price": 20, "weight": 10, "quantity": 6
+        }
+        let secondShop = fruits;
+        let thirdShop = fruits;
+        thirdShop.price = 250;
+           
+        secondShop = Object.assign({"name": "apple", "price": 20, "weight": 10, "quantity": 6 ,"price":2500})
+
+        console.log(fruits)
+        console.log(secondShop)
+        console.log(thirdShop);
+
+
+        // let data1;
+
+        // data1 = 6;
+
+        // data1 = "which is print";
+
+        // console.log(data1);
+
+
+        // let as = 21111121;
+        // let ab = 210;
+        // let zz = 100;
+
+        // console.log((as % ab));
+
+
+        // null
+        // var myVar = null;
+
+        // if (myVar) {
+        //     alert("its not null")
+        // } else {
+        //     alert("is null");
+        // }
+
+
+        // let add = function (num1, num2) {
+        //     return num1 + num2;
+        // }
+
+// let summ = add
+
+// let result = summ(5,6)m
+
+// console.log(summ);
+
+//  var str3 = 'A\uD835\uDC68';
+
+// var strIter = str3[Symbol.iterator]();
+
+// console.log(strIter.next().value); 
+// console.log(strIter.next().value); 
+
+
+// var str = new String("Demo Text");
+//        document.write(str.big());
+       
+
+//        var worldString = 'Hello  world';
+// document.write(worldString.fixed()); // "<tt>Hello, world</tt>"
+
+// var str=new String("KARTHI KEYAN");
+// console.log(str.toLowerCase(), str.toUpperCase());
+  
+// const date=new Date();
+// document.writeln("Today's day: "+date.getDate());
+
+
+function named(tit="CAMEL_CASE"){
+
+    tit = tit.toLowerCase();
+
+    tit = tit.split("_");
+    for(var m=1;m<tit.length;m++){
+
+        tit[m]=tit[m].charAt(0).toUpperCase()+tit[m].slice(1);
+
+    }
+    var tom = tit.join("");
+        console.log(tom);
+}
+
+named();
+    </script>
+</body>
+
+</html>

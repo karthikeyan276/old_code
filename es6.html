@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+</head>
+<body>
+    <script>
+
+        // isArray is checked for Array if array or not check result comes ture or false
+        let arr = [1,4,5,6,3,2];
+        let a1 = 2
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+       console.log(Array.isArray(fruits));
+        let a =[4];
+        console.log(Array.isArray(a));
+      
+        console.log(Array.isArray(a1));
+
+    
+ 
+        console.log(Array.isArray(arr));
+
+
+        //forEach
+
+        let arr1 = [1,2];
+         arr1.forEach(function(ele){
+             console.log(ele);
+         })
+
+
+         let are = [1,2,55,6]
+
+         let neware = are.map(function(el){
+             return el*el;
+         });
+console.log(neware);
+
+let customer = [
+            {furits:"bananna" , snacks:"chips",iceCream:"vennila"},
+            {filter1:"Low-High",filter2:"high-low"},
+            {card:"credit card",card2:"debit"}
+]
+
+
+let option = customer.find((pay)=>pay.furits + pay.filter1 + pay.card)
+console.log(option.furits);
+console.log(option.filter1);
+
+let names = ["Style","List","Raw"];
+let results = [];
+let kk=names.forEach(x => {
+    if (x.includes("s") || x.includes("S")) results.push(x)});
+console.log(results);
+
+//reduceright
+
+const numbe = [2,175,50,3,55];
+
+const too =numbe.reduceRight(myfun);
+
+function myfun(total,sum){
+
+
+    return total+sum;//inital value + current value 
+
+}
+console.log(too);
+
+
+let json = '{"a":1,"b":2}';
+let obj = JSON.parse(json);
+console.log(obj.a);
+        //stringify convert to a json string
+console.log(JSON.stringify({x:5,y:6}));
+
+//es6
+const v = 10;
+fun();
+
+function fun(){
+    let v=20;
+    console.log('v',v);
+    v=20
+    console.log('l',1);
+}
+console.log('v,' , v);
+console.log('l,',1);
+
+
+
+
+let name = "karthi";
+name="mathan"
+console.log(name);
+
+let neww = "morden";
+// let redecalre variables but const didnot use redeclare.
+function change(){
+        neww = "javascript";
+return neww
+}
+
+console.log(change(neww));
+
+let bmw = "i8"; // incase value did not return undefind  let used to redeclare variables in global and localscope , but const only used for local and global
+function funn(){
+     bmw = "2021"
+    return bmw
+}
+
+console.log(funn(bmw));
+
+//FOR..OF:
+const gh = [11,2,3,44,66];
+
+for (let value of gh){
+    value+=1;
+    console.log(value);
+}
+
+//illutrate over a string
+const str = 'karthi';
+
+for(const value of str){
+    console.log(value);
+
+}
+//Iterating over a TypedArray
+const  arra1 = new Uint8Array([0x00,0xff]);
+
+for (let ff of arra1){
+    console.log(ff);
+}
+
+// iterating over a map
+const dec = new Map([['a',1],['b',2],['c',3]]);
+
+for(let rrr of dec){
+    console.log(rrr);
+}
+
+for(let [key,value] of dec){
+    console.log(value);
+}
+//Rest opertaor argument pass 1st  parameter take 1s arguments how many parameter set and reaming arguments will show 
+
+function myFun(a,  b, c,...arg) {
+  console.log("a", a)
+  console.log("b", b)
+  console.log("arg", arg)
+}
+
+myFun("one", "two", "three", "four", "five", "six")
+
+
+//spreed operator.  copy of or concat of array values 
+let arrr = [1,2,3,4]
+let arrrr1 = [...arrr,5,6,7];
+console.log(arrrr1);
+ 
+let obj1 = {
+    id:  1,
+    id2:  10
+}
+let obj2 = {
+    ...obj1,
+    id2:"karthi"
+}
+
+console.log(obj2);
+//if function pass the values  rest 
+function test (...t){
+console.log(t);
+}
+test(5,6,7)
+
+
+//DESTRUCTURING: 
+
+const destr = [1,2,3];
+const [x,y , z]=destr;
+console.log('X: ' + x +'y: '+y +" " +z);
+
+
+//destructing set default value 
+let q ,r ;
+[q=5,r=7] = [1,2] ;
+
+console.log(q);
+console.log(r);
+
+
+function a2( ...g  )   {
+        console.log(g);
+}
+a2([q=5,r=7])
+
+let va, b, rest;
+[va, b] = [10, 20];
+console.log(va); 
+console.log(b); 
+
+[va, b, ...rest] = [10, 20, 30, 40, 50];
+console.log(va); 
+console.log(b); 
+console.log(rest); 
+
+//TEMPLATE LITERALS/STRINGS
+
+let t = 2;
+let d = 3;
+let h = 2;
+console.log(`a:${t} b:${d} h:${h}`);
+
+console.log(`\`` === '`');
+
+console.log(`\`` ==='`');
+
+console.log('Next line 1\n' +
+'newline 2');
+//Arrow function
+const walk = (b,n) =>{
+    return b * n};
+console.log(walk(2,3));
+//promises 
+
+let travel = new Promise((resolve,reject)=>{
+    let login = true;
+
+    if(login){
+        resolve("If all ready user")
+    }
+    else{
+        reject("Plz register account")
+    }
+})
+
+travel.then(ress =>{
+    console.log(`ress:`,ress);
+})
+
+travel.catch(error =>{
+    console.log(`error plz check `,error);
+})
+
+//classes expression used for defalut variable set output will come variable name
+let Rectangle10 = class {
+   constructor(height,width){
+        this.height = height;
+        this.width = width;
+    }
+};
+console.log(Rectangle10.name);
+//it can be accssed classname  via the property 
+let rectangle1 = class Rectangle2 {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+console.log(rectangle1.name);
+
+//retrun the values 
+class rect{
+    constructor(width,vertical){
+        this.width = width;
+        this.vertical = vertical
+    }
+    get area (){
+        return this.calArea();
+    }
+    calArea(){
+        return this.width*this.vertical;
+    }
+}
+const square = new rect(100,19);
+console.log(square.area);
+
+//class methods used to rest
+
+class Polygon {
+    constructor(...sides){
+        this.sides=sides;
+    }
+    *getSides(){
+        for(const side of this.sides){
+            yield side
+            
+        }
+    }
+}
+const pentagon = new Polygon(1,2,3,44,55,6);
+console.log([...pentagon.getSides()]);
+
+function* Polygon1(){
+    yield 1
+    yield 2
+    yield 3
+    yield 4
+}
+const Polygo1 = Polygon1();
+console.log(Polygo1.next())
+console.log(Polygo1.next());
+console.log(Polygo1.next());
+console.log(Polygo1.next());
+console.log(Polygo1.next());
+
+
+function* gen(){
+    yield 8;
+    yield 7;
+    yield 10;
+}
+const gett = gen();
+console.log(gett);
+
+function* fab(){
+    let a = 10;
+    yield a;
+    a=a+2;
+    yield "1";
+    a = a*6 ; 
+    yield "2";
+    a= a^1;
+    yield "3";
+}
+let aa = fab();
+
+console.log(aa.next());
+console.log("hello");
+console.log(aa.next());
+console.log(aa.next());
+console.log(aa.return());//if return given done the process and the line its return undefind
+console.log(aa.next());
+
+
+    </script>
+</body>
+</html>

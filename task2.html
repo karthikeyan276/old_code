@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date TAsk </title>
+</head>
+<body>
+    <script>
+            let convert =    new Date(1647838580894) % new Date(1647838458212)  ;
+
+            console.log("Millisconds :",convert);
+
+            
+
+            //     let s = Math.floor((convert / 1000));
+            //     let m = Math.floor((convert / 60000));
+            //     let h = Math.floor((convert / 3600000));
+            //     let d = Math.floor((convert / 86400000))
+
+           
+            // console.log("Seconds :",s);
+
+            // console.log("Minutes :",m);
+
+            // console.log("Hours :" ,h);
+
+            // console.log("Days",d);
+            
+            //2nd task 
+
+            // let a = Math.floor((s /60));
+
+            // let b = Math.floor((s/60))
+
+            // console.log("Seconds" , a  +  "Minutes"  ,  b);
+
+            // console.log("Seconds" , a);
+
+            // console.log("Minutes", b);
+
+/// function
+
+            function write(convert){
+
+
+                let s = Math.round((convert / 1000));
+                let m = Math.floor((convert / (1000*60)));
+                let h = Math.floor((convert / (1000*60*60)));
+                let d = Math.floor((convert / (1000 * 60 * 60 * 24)))
+
+           
+            console.log("Seconds :",s);
+
+            console.log("Minutes :",m);
+
+            console.log("Hours :" ,h);
+
+            console.log("Days",d);
+
+            }
+
+            write(convert);
+
+let answer = new Date(1647838580894); 
+
+let ns = answer.getTime();
+console.log(ns);
+let as =  new Date(1647838458212)  ;
+
+console.log(answer);
+
+let and = (answer - as)
+
+let s1 = Math.round((and / 1000));
+
+
+
+console.log(s1);
+
+
+function my(){
+    const hours=Math.floor(s1/3600); // 123/3600 precession not taken si its zero
+    
+    const minutes=Math.floor((s1-(hours*3600))/60);// 123 - 0 / 60  =  123/60 precession not taken si its zero
+    const seconds=s1-(hours*3600)-(minutes*60);// 0*3600 - 2*60 answer 120 - s1  = 123 123-120 =3
+
+    console.log("Hours",hours);
+
+    console.log("minutes",minutes);
+    console.log("seconds",seconds);
+    console.log(s1+" seconds means "+minutes+" min "+seconds+" seconds "+hours+" hours ")
+}
+
+my(123)
+
+//input 18005
+let seconds2 = 18005 ;
+
+function newcon(){
+
+    let hour12 = Math.floor(seconds2/3600);
+
+    const minut= Math.floor((seconds2/(hour12*3600))/60);//3600 its seconds
+    const seconds=seconds2-(hour12*3600)-(minut*60);
+
+    console.log("Hours:",hour12);
+    console.log("Minutess:",minut);
+    console.log("Seconds:",seconds);
+}
+
+newcon()
+
+// days difference  
+// > I/P →  2022(year) , 2 (Month) , 23 (Date)
+// 	> I/P -> 2021(year) , 2 (Month) , 12 (Date)
+
+
+date10 = new Date("2022/02/23");//date formate yyyy/month//days
+date21 = new Date("2021/02/12");
+
+
+function date(){
+    const difference = date10.getTime() - date21.getTime();//convert milliseconds
+
+    console.log(difference);
+    const output = difference / (1000 * 60 * 60 * 24);
+
+    console.log(output);
+
+}
+
+date();
+
+
+//Output -> 376 Days
+
+/// task 4
+
+const userDOB = new Date("1999/02/18");
+const today = new Date("2022/03/23");
+
+const msDiff = today - userDOB;
+ 
+const net = (msDiff % 7);
+console.log(net);
+
+console.log(msDiff);
+
+const dayd = Math.round((today.getFullYear() - userDOB.getFullYear()) );
+const dayss =Math.floor (today.getDate() - userDOB.getDate());
+
+
+console.log("b",dayss);
+
+let differ =Math.round( dayss / (1000 * 60 * 60 * 24 *365));
+
+console.log("age 1=>",differ);
+
+console.log(dayd);
+
+
+
+
+const age = Math.floor(msDiff / (365.25*24*60*60*1000));
+
+//const mm = Math.floor(12 * ("2022/03/23" - "1999/02/18")) + 1
+const month= Math.round(age / (1000 * 3600 * 24) +1);
+const days= Math.round(age / (1000*60*60*24) );
+
+const das = Math.floor(msDiff / (1000*60*60*24) )
+
+const dash = Math.floor((month + (age*12)));
+
+const dayws = new Date(728697600000);
+let qwer = dayws.getDate();
+console.log(qwer);
+
+console.log("dash =>",dash);
+
+const secon = (today.getTime()  - userDOB.getTime()) /1000 
+console.log(secon);
+
+console.log(das);
+console.log(age);
+console.log("Months",month);
+console.log(days);
+
+
+    </script>
+</body>
+</html>

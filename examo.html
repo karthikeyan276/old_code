@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //task  1
+let convert =    new Date(1647838580894) - new Date(1647838458212)  ;
+
+console.log("Millisconds :",convert);
+
+
+function write(convert){
+
+
+let s = Math.round((convert / 1000)); //seconds 
+let m = Math.floor((convert / (1000*60))); // minutes
+let h = Math.floor((convert / (1000*60*60))); //hour
+let d = Math.floor((convert / (1000 * 60 * 60 * 24))) //day
+
+
+console.log("Seconds :",s);
+
+console.log("Minutes :",m);
+
+console.log("Hours :" ,h);
+
+console.log("Days",d);
+
+}
+
+write(convert);
+
+let answer = new Date(1647838580894); 
+let as =  new Date(1647838458212)  ;
+
+var and = (answer - as)
+
+console.log("milliseconds",and);
+
+let s1 = Math.round((and / 1000));
+
+
+
+console.log(s1);
+//task 2
+
+function my(){
+    const hours=Math.floor(s1/3600); // 123/3600 precession not taken si its zero
+    
+    const minutes=Math.floor((s1-(hours*3600))/60);// 123 - 0 / 60  =  123/60 precession not taken si its zero / minutes
+    const seconds=s1-(hours*3600)-(minutes*60);// 0*3600 - 2*60 answer 120 - s1  = 123 123-120 =3
+
+    console.log("Hours",hours);
+
+    console.log("minutes",minutes);
+    console.log("seconds",seconds);
+    console.log(s1+" seconds means "+minutes+" min "+seconds+" seconds "+hours+" hours ")
+}
+
+my(123)
+
+//input 18005
+let seconds2 = 18005 ;
+
+function newcon(){
+
+    let hour12 = Math.floor(seconds2/3600);
+
+    const minut= Math.floor((seconds2/(hour12*3600))/60);//3600 its seconds for 1 hour
+    const seconds=seconds2-(hour12*3600)-(minut*60);
+
+    console.log("Hours:",hour12);
+    console.log("Minutess:",minut);
+    console.log("Seconds:",seconds);
+}
+
+newcon() //seconds mean 5-hour 0-min 5-seconds
+
+//task 3 > find the number of days between two years using Date() I/P →  2022(year) , 2 (Month) , 23 (Date)
+	//> I/P -> 2021(year) , 2 (Month) , 12 (Date)
+
+
+date10 = new Date("2022,02,23");//date formate yyyy/month//days 2022/02/23
+date21 = new Date("2021/02/12");
+
+
+function date(){
+    const difference = date10.getTime() - date21.getTime();//convert milliseconds
+
+    const diff = date10.getDate() - date21.getDate();
+    console.log(diff);
+
+    console.log(difference);
+    let oiut = diff / (1000*60*60*24)
+
+    console.log(oiut);
+
+    const output = difference / (1000 * 60 * 60 * 24);
+
+    console.log("days",output); //	Output -> 376 Days
+
+
+}
+
+date();
+
+//task 4  > I/P 1- 18/02/1999
+	//> I/P 2- 23/03/2022
+
+    const userDOB = new Date("1999/02/18");
+const today = new Date("2022/03/23");
+
+const age = today - userDOB
+
+console.log(age);
+
+const secon = (today.getTime()  - userDOB.getTime()) /1000 
+console.log(secon);
+
+
+
+
+msDiff = today.getFullYear() - userDOB.getFullYear()
+
+console.log("years=>",msDiff);
+
+const dayss =(today.getDate() - userDOB.getDate());
+const days = (today.getDay() - userDOB.getDay());
+
+const year = (today.getFullYear() - userDOB.getFullYear() );
+const month = (today.getMonth() - userDOB.getMonth());
+
+const age1 = Math.floor(age / (365.25*24*60*60*1000));
+
+console.log(year);
+
+console.log(age1);
+
+console.log("Days",dayss);
+
+console.log("Month =>",month);
+
+const dash = Math.floor((month + (year*12)));
+
+console.log(dash);
+
+
+// console.log(age);
+const userDOB1 = new Date("1999/02/18");
+const today1 = new Date("2022/03/23");
+
+// milliseconds
+const milisecondss = today1.getDate() - userDOB1.getDate();
+
+const date1 = new Date();
+//days
+const output1 = milisecondss / (1000 * 60 * 60 * 24);
+
+
+const secos = new Date(728697600000);
+let f = secos.getUTCSeconds() / 1000
+console.log(f);
+
+console.log("days",milisecondss);//days
+
+console.log(date1);
+
+
+let datees1 = new Date("1999/02/18");
+let datees2 = new Date("2020/03/23")
+const tmw = Math.abs(datees1 - datees2);
+const dds = Math.floor(tmw/(1000*60*60*24))
+let totalhours =  Math.abs((datees1 - datees2) / 1000 / 60 / 60);
+console.log(dds);
+console.log(totalhours);//23 years 1 months 5 days
+
+
+
+
+let startDate = new Date("2022,02,23");
+
+let endDate   = new Date("2021/02/12");
+
+let d22 = startDate.getTime();
+let d212 = endDate.getDate()
+console.log(d212);
+
+console.log(d22);
+
+
+const gnd = (startDate.getFullYear() - endDate.getFullYear() );
+const df = (startDate.getDate() - endDate.getDate());
+
+const gh = (startDate.getMonth() - endDate.getMonth());
+const das = startDate.getDay()- endDate.getDay();
+const daysss = (d22 - d212) /( (1000 * 60 * 60 * 24))
+console.log(gh);
+console.log(daysss);
+
+console.log(df);
+
+console.log(gnd);
+
+const dq = ("days" , gnd + df+gh)
+
+console.log(dq);
+
+    </script>
+</body>
+</html>

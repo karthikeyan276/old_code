@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+</head>
+<body>
+    <script>
+        let a = [{
+    mobile:"samsung",
+    price:1000,
+},
+{
+    mobile:"nokia",
+    price:2000,
+},
+{
+    mobile:"redmi",
+    price:6000,
+}
+]
+
+let c = a.filter((x)=>{
+    return x ,x.mobile !=="nokia"
+})
+console.log(c);
+//
+function ind() {
+  let index = a.map(function (e) 
+   {
+    return e.mobile;
+  }).indexOf('redmi');
+  console.log(  index);
+  
+}
+ind();
+
+delete a[1];
+console.log(a);
+
+
+
+
+
+let remin = a.filter(d=>d.mobile == 'nokia');
+
+console.log(a);
+
+
+
+
+
+        </script>
+</body>
+</html>

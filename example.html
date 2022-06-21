@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Local</title>
+    </head>
+    <body>
+        <h1>Data</h1>
+         Value : <input type="text" id="key"><br>
+        Local : <input type="text" id="input"><br>
+        <button type="button" id="value">save</button>
+
+        <br>
+        <label>Value : <span id="storage"></span></label>
+        <br>
+        <button type="button" id="local">Read data</button>
+        <br>
+        <button type="button" id="data">Delete Data</button>
+        <br>
+        <button type="button" id="all">Read All Data</button>
+        
+
+        <script src="saved.js"></script>
+
+        <script>
+        //       var ourArray = [];
+        // var i = 0;
+        // while(i<5){
+        //     ourArray.push(1);
+        //     i++;
+        // }
+        // let i = 0;
+        //     do {
+        //         i++;
+        //         if(i === 0) continue;
+        //         document.write(i);
+
+                
+        //     }while(i<9);
+//         if (/\S+@\S+\.\S+/.test('david@codeshack.io')) {
+//     document.write('Email is valid!');
+// } else {
+//     document.write('Email is invalid!');
+// }
+        
+function testSize(num){
+    if (num < 5){
+        return "sk";
+    } else if (num <10){
+        return "2";
+    }else if (num < 20){
+        return "3";
+    }
+}
+testSize(7);
+
+document.write(testSize(10));
+            
+
+        </script>
+    </body>
+</html>
+

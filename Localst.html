@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>Task</title>
+</head>
+<link type="text/css" rel="stylesheet" href="Task.css">
+<body > 
+   <script>
+       function lettersOnlyCheck(product)
+{
+   var regEx = /^[A-Za-z]+$/;
+   if(product.value.match(regEx))
+     {
+      return true;
+     }
+   else
+     {
+     alert("Please enter letters only.");
+     return false;
+     }
+
+} 
+function restrictAlphabets(e) {
+             var x = e.which || e.keycode;
+             if ((x >= 48 && x <= 57))
+                 return true;
+             else
+                 return false;
+         }
+
+   </script>
+   
+    <h1> Super Market</h1>
+    <table>
+        <tr>
+            <td>
+                <form name="form1" autocomplete="off" onsubmit="onFormSubmit()">
+                    <div class="datas">
+                    <div class="datas">
+                        <label for="Code"  >Product Code </label>
+                        <input type="number"  name="productCode" id="Code" />
+                    </div>
+                    <div>
+                        <label for="product"  > Name</label>
+                        
+                        <input type="text" name="product"    id="Name">
+                    </div>
+                    <div>
+                        <label for="Email" > Email</label>
+                        
+                        <input type="text" name="text1"    id="mail">
+                    </div>
+                    <div>
+                        <label for="qty">Qty</label>
+                        <input type="number" name="qty" id="qty"> 
+                    </div>
+                    <div>
+                        <label for="perPrice">Price</label>
+                        <input type="number" name="perPrice" id="perPrice">
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)" />
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <div class="datas">
+                        <thead>
+                            <tr>
+                                <th> Code</th>
+                                <th> Name</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </div>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </div>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>

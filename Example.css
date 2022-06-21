@@ -1,0 +1,17 @@
+body {
+    background-color: lightgray;
+    color: blue;
+
+  }
+  h1 {
+    color: blue;
+  }
+  .name {
+      background-color: lightslategray;
+      color:whitesmoke;
+
+  }
+  .btn{
+      color: white;
+      background-color: black;
+  }

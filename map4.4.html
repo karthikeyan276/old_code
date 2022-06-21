@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map some example</title>
+</head>
+<body>
+    <script>
+        let student = ["mathan","karthi","parthi","joe"];
+
+       student.map((stud,index)=>{
+           console.log("Hello.." + stud + "\n");
+           let ind = index ;
+
+           console.log("your position in top 5" + "Your position is  " +index +'\n');
+       })
+
+       let recipe = new Map([
+           ['cucumber' , 500],
+           ["tomato",1000],
+           ["onion",1900]
+           ])
+
+           for(let veg of recipe.keys()){
+               console.log("check",veg);
+           }
+           for(let amt of recipe.values()){
+               console.log("rate =>",amt);
+           }
+           for(let ent of recipe){
+               console.log(ent);
+           }
+
+           recipe.forEach((value,key)=>{
+               console.log(`${key}: ${value}`);
+           })
+
+           console.log(recipe.get('cucumber'));
+        let obj = Object.fromEntries(recipe);
+        console.log(obj);
+      let set = new Set(["orange",300]);
+      for(let value of recipe);
+      console.log(set);
+
+      recipe.forEach((value1,valueAgain,set)=>{
+          console.log(value1);
+      })
+
+
+      class User{
+          constructor(name){this.name = name;}
+          sayHi(){console.log(this.name);}
+      }
+      console.log(typeof User)
+
+      function sum(...args){
+          let sum = 2;
+          for (let arg of args) sum *=arg;
+          return sum;
+      }
+      console.log(sum(1));
+      console.log(sum(1,2));
+      console.log(sum(1,3,40));
+
+      let arr1 = [3,5,1];
+      let arr2=[2]
+      console.log(Math.max(arr2));
+     
+     //for each and set delete
+      let new_map = new Map();
+
+      let new_name = new Map();
+     // console.log(new_map);
+      new_map.set('1',"first");
+      new_map.set(3,"second");
+      new_map.set(2,"third");
+      new_map.set(5,"fourth");
+      new_name.set(8,"eourth");
+      new_name.set(7,"fqourth");
+      new_name.set(10,"ten");
+
+      console.log(new_map.delete('1'));
+
+      
+
+       
+      console.log(new_map.size);
+     
+      console.log(new_map.size);
+    
+       new_map.clear(1,"first");//map.clear all are clear 
+       console.log(new_map);
+
+      console.log(new_map.size);
+  
+  
+
+      console.log(new_map.clear(8));//map.clear mean all key and values are cleard
+
+      console.log(new_map.delete(4));//didnot value its false
+      console.log(new_map.delete(3)) //tostring mean output like comes string
+      
+      new_map.forEach(function(item,key,mapObj){
+          console.log(key.toString(),":",item);
+        
+      })
+
+      //
+      let personnel = [
+  {
+    id: 5,
+    name: "Joe",
+    pilotingScore: 98,
+    shootingScore: 56,
+    isForceUser: true,
+  },
+  {
+    id: 82,
+    name: "parthi",
+    pilotingScore: 73,
+    shootingScore: 99,
+    isForceUser: false,
+  },
+  {
+    id: 22,
+    name: "karthi",
+    pilotingScore: 20,
+    shootingScore: 59,
+    isForceUser: false,
+  },
+  {
+    id: 15,
+    name: "Mathan",
+    pilotingScore: 43,
+    shootingScore: 67,
+    isForceUser: true,
+  },
+  {
+    id: 11,
+    name: "Caleb Dume",
+    pilotingScore: 71,
+    shootingScore: 85,
+    isForceUser: true,
+  },
+]; 
+let total_score = personnel
+  .filter(function (person) {
+    return person.isForceUser===true;
+  })
+ 
+  .map(function (team) {
+    return team.pilotingScore + team.shootingScore; 
+    
+  })
+  .reduce(function (acc, score) {
+    return acc + score;
+  });
+  console.log(total_score);
+  
+//2nd method
+  const out5 = personnel.map((y)=>y.name+" id :" + y.id  )
+
+const name = personnel.filter((y)=>y.isForceUser===true)
+.map(y=>y.name+": "+y.id)
+console.log(out5);
+console.log(name);
+    //getters and setters javascript
+ let stude = {
+     firstName : "karthi",
+     lastName:"keyan",
+     get getName(){
+        
+        return this.firstName + this.lastName; //first retrun name is output for get name
+        return this.firstName;
+        return this.lastName;
+     }
+ };
+ // accessing data property
+ console.log(stude.firstName +stude.lastName );
+ console.log(stude.lastName);
+// accessing getter methods
+ console.log(stude.getName);
+//JavaScript Setter
+ let chan = stude.na = 'joe'//change name and value
+
+ console.log(chan);
+ //ASYNCHRONOUS ITERATION
+ async function* genrate(start , end){
+
+    for(let h = start ; h <= end;h++){
+        //  use await output will delay for secods
+        await new Promise(resolve=>setTimeout(resolve,1000))
+    yield h;
+    }
+    
+ }
+ (async () =>{
+     let genrate1 = genrate(1,5);
+     for await(let value of genrate1){
+         //console.log(value);
+     }
+ })();
+ //Exponentiation
+ console.log(3**4);//3*3*3*3 
+
+
+//Math.pow is given num * value power example factorial
+ let nun = Math.pow(5,2);
+ console.log(nun);
+ 
+
+ let arr = ['a', 'b', 'c']
+
+let a =arr.includes('a', 2)    
+let c = arr.includes('c', 2)
+console.log(a);
+console.log(c);
+
+
+//pad start() its 
+
+const str1 = "6";
+console.log(str1.padStart(2,0));
+ 
+const fullNumber = '9362613559';
+const last = fullNumber.slice(-4);
+const mask = last.padStart(fullNumber.length,'*');
+
+console.log(mask);
+//pad start is staring value but number only string values enter its convert 
+function left(num, length){
+    
+     let n =num.toString().padStart(length,0);
+     return n
+}
+const num = 12345;
+console.log(left(num,8));
+//pad end()  last which number giver and add 
+let str  = "6";
+console.log(str.padEnd(2,0));
+
+const full = '9790367105';
+const first = full.slice(0,-6);
+const mas = first.padEnd(full.length,'*');
+console.log(mas);
+
+function lef(nun4,len){
+    let n1 = nun4.toString().padEnd(len,0);
+    return n1
+}
+const nun4 = 2121;
+console.log(lef(nun4,8));
+
+//entries
+const obje = {
+    a:'user',
+    port:3030,
+    b:"user2",
+    port1:3001,
+};
+for(const [key,value] of Object.entries(obje)){
+    console.log(`${key}: ${value}`);
+}
+
+const arraob = 
+    {
+        a:'user',
+    port:3030,
+    b:"user2",
+    port1:3001,
+}
+
+for(let [key,value] of Object.entries(arraob)){
+    console.log(Object.values(arraob));}
+
+
+//TRAILING COMMAS: , its length
+let exam = [1,2,3,,,];
+console.log(exam.length);
+
+function f(p){
+
+}
+function f1(p,){
+
+}
+let cr = Math.max(10,20);
+console.log(cr);
+let cr1 =Math.max(100,20,)
+console.log(cr1);
+
+let nuber = 0;
+//find biggest number used for max its negative value inside -99 but -1 is biggest value
+console.log(Math.max(1,100,300,2000,999,1099,1999));
+
+//use spred operator max value identify 
+let add = [1,4,4,4,1090];
+let mac = Math.max(...add)
+console.log(mac);
+
+//OBJECT.GETOWNPROPERTYDESCRIPTORS():
+
+const objectqw = {
+    property1:44,
+    property2 : 22
+};
+const desc = Object.getOwnPropertyDescriptors(objectqw);
+console.log(desc.property1.enumerable);
+
+
+console.log(desc.property1.value);
+
+const person = {name:'joe'};
+
+let property = Object.getOwnPropertyDescriptor(person,'name');
+//console.log(property);
+
+//object values inside values output will print
+const objs = {
+    food: 'baqw', baz: 42, mentor : 22 , 10:"user" ,20:"user1"
+};
+console.log(Object.values(objs));
+
+let arrayof = [
+    {i:"bb"},
+    {age:"yes"},
+    {confic:"yes"}
+]
+console.log(Object.values(arrayof));
+//math min  find min values 
+console.log(Math.min(1000,100,300,2000,999,1099,1999));
+//search the position of search element
+let text = "karthi keyan";
+let n = text.search("keyan");
+console.log(n);
+
+let myfunc = function(a,b,...rest){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+myfunc(6,"srivi","Joe","parthi","zoo",1122);
+
+// const task4 = mobile.map((ele)=>{
+    
+//     return ele.MobileName === 'Samsung' ? null : ele})
+//     console.log("Null",task4);
+// let fin_index = mobile.findIndex((ele)=>
+//  ele.MobileName == 'Samsung')
+// if(fin_index >= 0){
+// mobile[fin_index].MobileName = null
+// }
+// console.log(mobile)
+
+function addone_product() {
+var y1 = [{
+    MobileName: "ddd",
+
+    Price: 45000,
+
+    AvailableQuantity: 0
+},
+
+{
+    MobileName: "aaaa",
+
+    Price: 75000,
+
+    AvailableQuantity: 5
+}]
+
+console.log("Add one product use =>", ...mobileDetails, y1)
+// console.log("Add one more product =>", mobileDetails.concat(y1))
+}
+
+addone_product()
+    </script>
+</body>
+</html>

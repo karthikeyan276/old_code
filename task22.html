@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/3/26</title>
+</head>
+<body>
+    <script>
+  //  var d1 = new Date()
+  //  console.log(d1.toDateString());
+
+  //  var d1 = new Date(1647838458212)
+  //  console.log(d1.getMilliseconds());
+
+
+  //  var start = new Date();
+  //  something();
+  //  var end = new Date();
+
+  //  var end = new Date();
+  //  var elapsed = end.getTime() - start.getTime();
+  //  console.log(elapsed);
+
+  //  function something(){
+  //      for (var i =0; i<100000; i++){
+
+  //      }
+  //  };
+
+  //  var day = 1647838458212;
+
+  //  function formatDate(date){
+  //      const day = {
+  //          date:date.getDate(),
+  //          month:date.getMonth() +1,
+  //          year:date.getFullYear() ,
+  //          hour:(date.getHours() %12) || 12 ,
+  //          minute:date.getMinutes(),
+  //          amorpm:date.getHours() < 12 ? "AM": "PM"
+  //      };
+  //      return  `${day.date}/${day.month}/${day.year}`;
+
+  //  }
+  //  const myDate = new Date();
+  //  const myDatee = formatDate(myDate);
+  // console.log(myDate);
+    
+   const testDate = new Date(1590757517834);
+// "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
+
+//testDate[Symbol.toPrimitive]('string');
+// Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
+
+testDate[Symbol.toPrimitive]('number');
+
+
+// Returns "1590757517834"
+
+//testDate[Symbol.toPrimitive]('default');
+
+//console.log(testDate );
+
+//task 1  //  Input : title_case
+
+function f1(str) {
+  var i, small = str.split('_');
+
+
+  console.log(small.length);
+
+  for (i=0; i<small.length; i++) {
+    //small[0]= title 
+    //small[1] = case
+    //small[2] = undefined
+    small[i] = small[i].charAt(0).toUpperCase() + small[i].slice(1);
+
+   
+  }
+  return small.join('');
+}
+
+
+console.log(f1('title_case')); //Output : TitleCase
+
+//task 2  // Input : titleCase
+function f2(f12) {
+
+
+  var i, kar = f12.split(' ');
+  for (i=0; i<kar.length; i++) {
+    kar[i] = kar[i].charAt(0).toUpperCase() + kar[i].slice(1);
+  }
+  return kar.join('');
+}
+
+
+console.log(f2('titleCase')); //TitleCase
+
+
+
+//task 3 // Input : TITLE_CASE
+
+function taskk01(testing = "TITLE_CASE"){    
+
+testing=testing.toLowerCase();
+
+ testing=testing.replace("_"," ");
+ 
+
+ testing=testing.split(" ");   
+
+ for(var i=0;i<testing.length;i++){
+  
+ testing[i]=testing[i].charAt(0).toUpperCase()+testing[i].slice(1);
+
+
+     }
+
+  var out = testing.join("");   
+
+   console.log(out);                    
+       }
+       taskk01(); //Output : TitleCase
+
+
+//task 5 //  Input : SNAKE_CASE
+function named(tit="SNAKE_CASE"){
+    tit = tit.split(" ");
+
+    for(var m=0;m<tit.length;m++){
+
+        tit[m]=tit[m].toLowerCase();
+
+    }
+    var tom = tit.join(" ");
+        console.log(tom);
+}
+
+named();  //Output : snake_case
+
+///task 6  Input : camel_case
+function capsss(f6) {
+  var i, cas = f6.split('_');
+  for (i=1; i<cas.length; i++) {
+    cas[i] = cas[i].charAt(0).toUpperCase() + cas[i].slice(1);
+  }
+  return cas.join('');
+}
+
+
+console.log(capsss('camel_case')); //Output : camelCase
+
+//task 7   Input : CamelCase
+
+function trrr(err1) {
+  var has = err1.split(' ');
+  for (p=0; p<has.length; p++) {
+    has[p] = has[p].charAt(0).toLowerCase() + has[p].slice(1);
+  }
+  return has.join(' ');
+}
+
+
+console.log(trrr('CamelCase')); // Output : camelCase
+
+
+//task 8  Input : CAMEL_CASE
+function named1(tit="CAMEL_CASE"){
+
+tit = tit.toLowerCase();
+
+tit = tit.split("_");
+
+
+for(var m=1;m<tit.length;m++){
+
+    tit[m]=tit[m].charAt(0).toUpperCase()+tit[m].slice(1);
+
+}
+var tom = tit.join("");
+    console.log(tom);
+}
+
+named1(); // Output : camelCase
+
+    </script>
+</body>
+</html>

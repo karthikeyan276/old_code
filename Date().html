@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <script>
+        //getDate()
+
+        let max = new Date('December 27 , 2022 13:59:59');
+
+        let day = max.getDate();
+
+        console.log(day);
+
+       
+
+let days = max.getDay(); // sun - sat 0  -  7
+
+console.log(days);
+
+var options = { weekday: 'long'};
+console.log(new Intl.DateTimeFormat('en-US', options).format(max));// // Monday
+
+const  dates =  new Date('June 27, 50 23:59:59');//start with 1950 end with 2049
+
+console.log(dates.getFullYear())
+
+
+var today = new Date();
+var year = today.getFullYear();//full year
+
+console.log(year);
+
+let todays = new Date();
+let years = todays.getDate();//today date()
+
+console.log(years);
+
+let hours = max.getHours();// time get()
+
+console.log(hours);
+
+let mill = new Date();// current date format print Wed Mar 23 2022 12:31:23 GMT+0530 (India Standard Time)
+let milliseconds = mill.getMilliseconds();
+
+console.log(mill);
+
+let mint = new Date();//current date
+
+console.log(max.getMinutes());// minuts only print
+
+console.log(max.getMonth()); // month print month start (0 - 11)
+
+console.log(max.getSeconds()); // print seconds
+
+console.log(mint.getSeconds()); // print current sec
+
+console.log(max.getTime());
+
+
+let end , start;
+
+start = new Date('December 27 , 2022 13:59:59  ');
+for ( let i=2; i< 60;i++){
+    
+    //console.log( i); 
+    Math.sqrt(10);
+    // console.log(Math);
+
+    
+}
+end = new Date("December 27 , 2023 13:59:59");
+
+
+
+console.log('operation ' + (end.getTime() - start.getTime()) + ' msec');  // 31536000000 52 week
+
+// let n1 = 10;
+// let n2 = 9097;
+// calc = Math.PI;
+// console.log(calc);
+
+console.log(mint.getTimezoneOffset()); // minutes  utc timezone - current timezone
+
+console.log(mint.getUTCDate());//23
+
+console.log(mint.getUTCDay());//2
+
+console.log(max.getUTCMilliseconds());//didi not mention so output is 0
+
+console.log(mint.getUTCMilliseconds()); //current milliseconds
+
+const date1 = new Date('23 March 2022 01:55:30 GMT+07:00'); 
+const date2 = new Date('1 January 2000 13:25:30 GMT+03:30'); // 10 hr different
+console.log(date2.getUTCHours());//Hourse 
+
+console.log(date1.getUTCMonth()); // month start with 0-11
+
+console.log(mint.getYear());
+
+let yea = new Date('December 25, 2000 23:15:00'); //below 1900 its negetive years
+
+yea.setFullYear(1980);
+let  tal = yea.getFullYear();// set value only print
+
+console.log(tal);
+
+
+yea.setYear(50);
+ let tta = yea.getYear();
+console.log(tta); //set default year
+
+const starts = Date.now();
+console.log(starts);
+
+function diffe(date1, date2) {
+  return date2 - date1;
+}
+
+function diffGetTime(date1, date2) {
+  return date2.getTime() - date1.getTime();
+}
+
+function bench(trw) {
+  let date1 = new Date();
+  let date2 = new Date();
+
+  console.log(date1);
+
+  let start = Date.now();
+  for (let i = 0; i < 10000; i++) trw(date1, date2);
+
+  return Date.now() - start;
+}
+
+console.log((  bench(diffe) + 'ms' ));
+console.log((  bench(diffGetTime) + 'ms' ));
+
+
+//date.parse 
+
+let ms  = Date.parse('2012-01-26T13:51:50.417-07:00')
+console.log(ms);
+    </script>
+</body>
+</html>

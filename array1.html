@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array1</title>
+</head>
+<body>
+    <script>
+        const daily = ["card" , "insert" , "enter pin" , "check amount database", "payment success"]
+daily.forEach((item,index)=>{
+    console.log(index,item);
+});
+
+//every
+let numbers=[-100,99,188,2000]  //every mean if condition all are ok its comes true , 
+function big(n){
+    return n>=100;
+
+}
+
+console.log(numbers.every(big));
+
+function big1(n1){
+
+    return n>100;
+}
+console.log(numbers.some(big)); // some is simple or operator any one is true all are true
+
+//push remove last  element
+ //numbers.pop()
+
+//console.log("pop",numbers);
+
+
+//numbers.shift()//remove 1st value
+//console.log("shift",numbers);
+
+numbers.splice(2,1);
+
+console.log("splice",numbers);
+
+//push push end of array
+
+const furits = ["apple","orange","tommotto"];
+
+// furits.push("mango")
+
+// console.log(furits);
+//unshift used for add the starting
+// furits.unshift("juice")
+//splice
+
+furits.splice(1,1,"water","melon")
+console.log(furits);
+
+const numbe = [2,175,50,3,55];
+
+const too =numbe.reduceRight(myfun);
+
+function myfun(total,sum){
+
+
+    return total+sum;//inital value + current value 
+
+}
+console.log(too);
+
+console.log(numbe.fill("karthi",2,4));//fill replace given value ex 5 is replace , 1 is starting number  4 is ending 
+//entries
+const ent = numbe.entries(); // means index of the array next() means next value
+
+console.log(ent.next().value);
+console.log(ent.next().value);
+console.log(ent.next().value);
+console.log(ent.next().value);
+
+const large = (lar)=>lar>13
+console.log(numbe.findIndex(large)); //findindex mean example for or condition
+//flat
+const arr1 = [0, 1, 2, [3, 4]];
+console.log(arr1.flat()); // subarray concat 
+
+
+let arr12 = [1, 2, 3, 4];
+
+let ar=arr12.map(x => [x * 2]);
+console.log(ar);
+
+let ar1=arr12.flatMap(x => [x * 2]);
+console.log(ar1);
+let ar2 =arr12.flatMap(x => [[x * 2]]);
+console.log(ar2);
+
+const web = Array.from({length: 6}, (v, i) => i);
+
+console.log(web);
+//copywithin its mean array 
+const array2 = ['a', 'b', 'c', 'd', 'e'];
+
+console.log(array2.copyWithin(0,2,4));//0 is starting value or which letter remove and 2 is position of copy 4 is copy of length 3 and 4
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elseif</title>
+</head>
+<body>
+    <script>
+       const a = 10;
+       const b = 11;
+       const c = 10;
+       const d = 12;
+       const e = 50;
+
+       //max = ((a>b) ? "a is biggerthan b"  :  (a>c) ? "a is bigger than c " : (b>d) ? " a is bigger than d " : (d>b) ? "a is bigger than  e" : "ttt");
+
+    //    max = (a > b && a > c && a > d)
+	// 	? a : ((b > c && b > d)
+	// 	? b : (c > d ? c : d));
+
+     
+max = (a>b && a>c && a>d && a>e) ? ('a is greater ', a):
+        (b>a && b>c && b>d && b>e) ? ('b is greater' , b) :
+        (c>a && c>b && c>d && c>e) ? ('c is greater',c) :
+        (d>a && d>b && d>c && d>e) ? ('d is greater ', d):
+        (e>a && e>b && e>c && e>d) ? (' e is greater' , e):"matched"
+
+       console.log(max);
+
+       let name = "karthi";
+       let age =26;
+       let email = "kk@gmail.com ";
+out = (name == "kasethi" || age == 21 && email == "ka@gmail.com" ) ? ("didnot matched"): 
+(name == "karti" && age == 26 || email == "fk@gmail.com" ) ? (" matched"): 
+        (name == "karthi" || age == 26 && email=="kk@gmail.com") ? ( "gggmatched") : ("")
+
+       console.log(out);
+
+       let unit = e>(a||b||c||d) ? true:false
+       console.log(unit);
+    </script>
+</body>
+</html>

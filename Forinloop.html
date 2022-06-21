@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forin loop</title>
+</head>
+<body>
+    <script>  // obj inside keyone by one run and incase inside array only index value passing
+        const car = {
+            name:'BMW',
+            year:2022,
+            model:'I8'
+        };
+        for(let key in car){
+            console.log("key:", car[key]); 
+        }
+        let name = ['BMW', 'AUDI','BENZ']
+
+        for(let key in name){
+            console.log(name[key]);
+        }
+    </script>
+</body>
+</html>

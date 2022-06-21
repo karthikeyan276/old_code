@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+       const dress = ["jean",'casuals','fromal'];//length starts with 1
+       console.log(dress.length);
+
+       //const name = new Array(-100);//its invalid
+       //console.log(name.length);
+
+       const numbeer = [2,3,1,2];
+       const length = numbeer.length;
+
+       console.log(length);
+       for(let i=0;i<length;i++){
+           numbeer[i]*=2;
+       }
+
+       console.log(numbeer);
+
+        //to create empty array
+       const nunm1=[];
+       nunm1.length=3;
+       console.log(nunm1);
+
+   
+//splice
+
+let arr = ["Model","I8","BMW"];
+delete arr[1];//delete array output will ['Model',empty,'BMW']
+
+//console.log(arr);
+console.log(arr.length);//length is not change 
+
+
+let arr1 = ["Model","I8","BMW"];
+arr1.splice(0,1)//1,0 mean all array disply (1,1) mean model bmw only 
+console.log(arr1);
+
+let ar = ["Bike", "car","bus"];
+ar.splice(2,1,"BMW","Audi")//1,1 means length of the array position 1 replace input value
+console.log(ar);
+
+let awr = ["Bike", "car","bus"];
+awr.splice(2,0,'karthi','mathan');//its replace the value only 2nd position 2nd value without removel 
+console.log(awr);
+//negative index allowed 
+let brr=[1,8,5,7];
+
+brr.splice(-1,1,3,4,6);//-1 last position of array -1,1 mean last position array remove and 3,4,6 add
+
+console.log(brr);
+
+//slice
+
+let br1 = ['k','a','r','t','h','i']// index position stat with 0 length start with 1 so 
+
+console.log(br1.slice(1,3));
+console.log(br1.slice(-2));// end of string reverse 
+
+let br2 = [1,2,3,6,7,8]
+
+console.log(br2.slice(0,-1));// 0 is start postion 1 & -1 end of the value
+
+let br3= ["karthi" , "keyan"]
+
+console.log(br3.slice(0,1));
+
+let ex = [1,2,4];
+console.log(ex.concat([3,11,4,"kka"]));//concat 1st input value finish and 2nd input value join
+
+console.log(ex.concat([3,5],[5,-1],1,2,3,"nas"));//multiple array convert into single array
+
+
+//Symbol.isConcatSpreadable
+
+let arr4 = [1, 2];
+
+let arrayLike = {
+    
+  0: "something",
+  1: "else",
+  2:"go",
+  [Symbol.isConcatSpreadable]: false,//true mean check length its 1 only print 0 
+  length: 2
+};
+
+console.log( arr4.concat(arrayLike) );
+
+//forEach
+let ex2 = ["karthi" , 10,"keyan","mathan"]
+
+ex2.forEach(ele => console.log(ele))
+
+
+let ex3 = [1,0,false];
+
+
+//searching array
+//indexoff
+
+let array = [10,0,false];
+
+console.log(array.indexOf(10));//location finding starts with 0
+console.log(array.indexOf(false));
+console.log(array.indexOf(null));
+
+console.log(array.includes(10));//result comes true or false NaN given value indexof retruns -1 include return tru
+
+
+//find array 1st value print 
+
+let users = [
+  {id: 1, name: "karthik"},
+  {id: 2, name: "keyan"},
+  {id: 3, name: "karthik"}
+];
+
+let user = users.find(item => item.name == "karthik");
+let use1r = users.filter(item => item.name == "karthik");
+console.log(use1r);
+
+console.log(user.name);
+
+
+const one = 'loaasascascam koajsahjulsdo mkdsmjdnckdnckd dgo';
+
+const search = 'o';
+console.log(`"${search}" ${one.lastIndexOf(search)} `);//last indexof mean by searching string take the last string before its identify but no 
+
+//map
+const num = [5,10,3,410,81];
+
+function double(x){
+  return x * 2 ;
+}
+
+const map = num.map(double);
+
+console.log(map);
+//true or false 
+const out1 = num.map((y)=>y%2===0);
+console.log(out1);
+// binary num conversion first convert tostring  array passing function 
+//map syntax map((parameter)=>)
+const outp = num.map((y)=>y.toString(2));
+
+
+console.log(outp);
+//only print the odd and even value 
+const out = num.filter((y)=> y%2===0);
+
+console.log(out);
+
+
+
+//reduce()
+const out2 = num.reduce(function(acc,num2){
+  acc = acc + num2;
+
+  return acc;
+})
+
+console.log(out2);
+//biggest value
+
+const out3 = num.reduce(function(small,max){
+  if(max>small)
+  //console.log(small);//max 10,4,81   5,3,4,
+  
+  {
+    small = max;
+    
+  }
+  return small;
+})
+console.log(out3);
+
+const out4 = users.map((x)=>x.name + x.id) // map is create all are same array
+console.log(out4);
+let user1 = [
+  {id: 1, name1 : "karthik",age:22},
+  {id: 2, name1: "keyan",age:10},
+  {id: 3, name1: "Mthan",age:20}
+];
+
+const out5 = user1.map((y)=>y.name1 +" id :" + y.id +" age : "+ y.age )
+console.log(out5);
+//reduce method output is example value substract value full enter but ap each number can multiply 
+
+// const out6 = user1.reduce(function(a,b){
+//   if(a[b.age]){
+//     a[b.age] = ++a[b.age];
+//   }else{
+//     a[b.age] = 1;
+//   }
+//   return a;
+// });
+
+// console.log(out6);
+
+const out7 = user1.filter((y)=>y.age===20).map(y=>y.name1)
+console.log(out7);
+
+const iob = user1.filter((h)=>h.name1)
+console.log(iob);
+
+let out8 = user1.map(function(x , y){
+  
+if(x===22){
+  y>22;
+
+}else{
+  return name
+}
+
+})
+console.log(out8);
+
+
+
+function func() {
+        // Original array
+        let arr = [2, 56, 78, 34, 65];
+ 
+        // new mapped array
+        let new1 = arr.map(function (num) {
+            return Math.round(num / 2);
+        });
+ 
+        console.log(new1);
+    }
+    func();
+
+ const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce(function (result, item) 
+
+{
+
+  return result + item;
+  
+});
+console.log(sum);
+
+//forEach
+
+let user2 = [
+  {id: 1,  name1 : "karthik",age:22},
+  {id: 2, name1: "keyan",age:10},
+  {id: 3, name1: "Mthan",age:20}
+];
+user2.forEach(data =>
+console.log(data));
+
+function call(item){
+  console.log(item);
+}
+user2.forEach(call)
+
+function ca(it){
+  console.log(this ==window);
+}
+user2.forEach(ca)
+//
+const arra = [1, ,3,6 ,  ,10] // forEach did not consider empty slots
+arra.forEach(function(im){
+  console.log(im);
+})
+
+//sort 
+
+const nun1 = [35,54,65,12,78];
+
+let result = nun1.sort();
+
+console.log(result);
+
+    </script>
+</body>
+</html>

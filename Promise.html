@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Practice JS</h1>
+
+<div class="rr">
+<p id="demo">
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+let myPromise = new Promise(function(myResolve, myReject) {
+  let x = "hello";
+
+
+  if (x == "hello") {
+    myResolve("done"); 
+  } else {
+    myReject("Check");
+  }
+});
+
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+
+var p1 = Promise.resolve(99);
+var p2 = 1337;
+var p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("jyy");
+  }, 100);
+});
+
+Promise.all([p1, p2, p3]).then(values => {
+  console.log(values); 
+});
+</script>
+
+</p>
+</div>
+</body>
+</html>

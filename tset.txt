@@ -1,0 +1,7 @@
+JS:
+
+	Promise 
+
+	callback: first call function run 
+
+		one(call_two) , one(two); 1st call .

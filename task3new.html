@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <script>
+
+        //getJobsBySeeker
+        // const  getJobsSeeker = [];
+
+        // function getJobsBySeeker(seeker_id){
+
+
+
+        //     getJobsSeeker.push({
+        //         seeker_id,
+        //     })
+
+        //     console.log(getJobsSeeker);
+
+        // }
+
+
+
+        // getJobsBySeeker(jobs.filter(()=>blockedSeekers !== blockedJobs))
+
+        // jobsbyseeker=(seekerId)=>{
+
+        // for(y in blockedJobs){
+
+        // if(blockedJobs[y].seeker_id !==seekerId){
+
+        //     return jobs[y]
+
+        // }
+
+        // }}
+
+        // console.log("get",jobsbyseeker(0011));
+
+
+        // let getJobsBySeeker=[];
+
+        // function getJobsBySeeke(){
+
+        //     // let s = jobs.map((x)=>x.jobs )
+
+        //     let kk=blockedSeekers.map(x => {
+        //     if (x.includes("s") || x.includes("S")) results.push(x)});
+
+
+
+
+        // }
+
+
+        // console.log(getJobsBySeeke());
+        // const Seeker = new Object(id="1000",Name="karthi",age="26",created_at=11/2/22);
+
+        // console.log(Seeker);
+        // const seekrs = [
+        //     {
+        //         id: 100,
+        //         name: "Karthi",
+        //         age: 26,
+        //         created_at: "22/2/2021",
+
+        //     },
+        //     {
+        //         id: 101,
+        //         name: "Mathan",
+        //         age: 29,
+        //         created_at: "22/2/2021",
+
+        //     },
+        // ]
+
+
+
+        // const providers = [
+        //     {
+        //         id: 10001,
+        //         name: "Joe",
+        //         company_name: "Unicorn",
+        //         industry: "IT-Programming",
+        //         created_at: "10/2/2020"
+        //     },
+        //     {
+        //         id: 10002,
+        //         name: "Jyothis",
+        //         company_name: "AI_Labs",
+        //         industry: "Admin",
+        //         created_at: "12/2/2020"
+        //     },
+        //     {
+        //         id: 10003,
+        //         name: "Parthi",
+        //         company_name: "RayGrids",
+        //         industry: "Tele Caller",
+        //         created_at: "22/2/2020"
+        //     },
+
+
+        // ]
+
+        // const jobs = [
+        //     {
+        //         id:001,
+        //         provider_id: providers[0].id,
+        //         Job_title:"Team Leader",
+        //         created_at:"19/11/2010",
+
+
+        //     },]
+        //     console.log(jobs);
+
+
+        //     const appliedJobs=[{
+        //         seeker_id:seekers[0].id,
+        //         job_id:jobs[0].id
+
+        //     }]
+        //     console.log("Applied",appliedJobs);
+
+        //    const blockedJobs =[{
+
+        //     seekers:seekers[0].id,
+        //     job_id:providers[1].id,
+
+        //    }]
+        //    console.log("blocked",blockedJobs);
+
+        //    const blockedseekers = [{
+        //        seeker_id:seekers[0].id,
+        //        provider_id:providers[1].id
+        //    }]
+
+        //    console.log(blockedseekers);
+
+
+        //use function
+
+
+        // function addone_seekers() {
+        // let y1 = [{
+        //         id: 103,
+        //         name: "Parthi",
+        //         company_name: "RayGrids",
+        //         industry: "Tele Caller",
+        //         created_at: "22/2/2020"
+        //     },
+
+        // ]
+
+        // console.log("Add one seekers =>", ...seekers, y1)
+        // }
+
+        // addone_seekers()
+
+        // //add providers
+        // function addone_providers() {
+        // let y1 = [{
+        //     id: 10005,
+        //         name: "Hari",
+        //         company_name: "Digitz",
+        //         industry: "Architech",
+        //         created_at: "09/2/2020"
+        // },
+
+        // ]
+
+        // console.log("addone providers =>", ...providers, y1)
+        // }
+
+        // addone_providers()
+
+        // function addone_jobs() {
+        // let y1 = [{
+        //     id:002,
+        //     provider_id: providers[2].id,
+        //     Job_title:"Devloper",
+        //     created_at:"08/11/2010",
+
+
+        // },
+
+        // ]
+
+        // console.log("addone jobs =>", ...jobs, y1)
+        // }
+
+        // addone_jobs()
+
+        // function apply_job() {
+        // let app = seekers.map((ele)=>ele.id) 
+        // let cc=jobs.map((el)=>el.id)
+
+
+        // console.log("apply jobs =>", app,cc )
+        // }
+
+        // apply_job()
+
+        const seeker = []
+
+        function seekers(id, name, age) {
+
+            seeker.push({
+                id,
+                name,
+                age,
+                date: new Date()
+
+            })
+        }
+        seekers(1000, "karthi", 26);
+        seekers(1001, "mathan", 29);
+        seekers(1002, "Prabhu", 26);
+        console.log("added", seeker);
+
+
+        //addProvider
+        const provider = [];
+
+        function addProvider(id, name, company_name, industry) {
+            provider.push({
+                id,
+                name,
+                company_name,
+                industry,
+                created_at: new Date()
+            })
+        }
+
+        addProvider(100, "Joe", "Unicorn", "IT");
+
+        addProvider(101, "Pathi", "RayGrids", "Architech");
+        addProvider(102, "Sundar", "Sundar pvt", "Non-It");
+        console.log("provider", provider);
+
+
+        const jobs = []
+        function addJobs(id, provider_id, job_title) {
+            jobs.push({
+                id,
+                provider_id,
+                job_title,
+
+                created_at: new Date()
+            })
+            // remov = provider.filter(d => d.industry === 'IT');
+            // console.log(remov);
+        }
+
+        // addJobs(200,"Team Lead",provider.filter(d => d.industry === 'IT'))
+
+        addJobs(200, provider[0].id, "Team Lead")
+        addJobs(201, provider[1].id, "BIM")
+        addJobs(202, provider[2].id, "Tele caller")
+
+
+        console.log("add jobs", jobs);
+
+
+
+        //applyJob
+
+        const appliedJobs = [];
+
+        function applyJob(seeker_id, job_id) {
+
+            appliedJobs.push({
+                seeker_id,
+                job_id,
+            })
+        }
+
+
+        applyJob(seeker[0].id, jobs[0].id)
+        console.log("applied jobs", appliedJobs);
+
+
+
+        //blockSeeker
+        const blockedSeekers = [];
+
+        function blockSeeker(providerId, seekerId) {
+
+            blockedSeekers.push({
+
+                providerId,
+                seekerId,
+            })
+
+        }
+        blockSeeker(provider[1].id, seeker[2].id)
+        console.log("blockSeeker", blockedSeekers);
+
+        //blockJob
+        const blockedJobs = []
+        function blockJob(seeker_id, job_id) {
+            //console.log(seeker_id,job_id)
+            blockedJobs.push({
+                seeker_id,
+                job_id,
+            })
+        }
+
+        blockJob(seeker[2].id, jobs[2].id)
+        console.log("blockedjobs", blockedJobs);
+
+
+        /////////////////////////////
+        // let findSeeker = []
+
+        // let getJobsBySeeker = blockedSeekers.map((remov) => {
+        //     // console.log(remov)
+        //     seeker.map((ss) => {
+        //         //console.log(remov,ss);
+        //         remov.seekerId != ss.id && findSeeker.push(ss.id)
+        //     })
+
+        // })
+        // console.log(findSeeker)
+
+        
+
+        function getJobs(id) {
+            return jobs.filter(x => x.provider_id === id)
+        }
+
+
+        console.log("get Jobs",getJobs(101));
+/////////////////////////////////
+function getApplidJobs (provide){
+    return appliedJobs.map(x=>{
+
+       return jobs.find(v=>{
+            
+            return x.job_id == v.id && v.provider_id == provide && v //,console.log(v)
+           
+                })
+    })
+}
+console.log("get applied jobs",getApplidJobs(100))
+
+function gett(prk){
+
+return appliedJobs.map(y=>{
+
+    return jobs.find(z=>{
+
+    return  y.job_id == z.id && z.provider_id == prk //, console.log( z.provider_id == prk   );
+
+   })
+
+     })
+
+
+
+}
+console.log("322",gett(100));
+////////////////////////
+
+
+function getSeekerApplidJobs(seeker){
+    return   appliedJobs.map((d)=>{
+        return   jobs.find((f)=>{
+            return  d.job_id == f.id && d.seeker_id == seeker &&  f  //,console.log(f);
+        })
+        
+    })
+}
+console.log("getSeekerApplidJob",getSeekerApplidJobs(1000));
+
+
+function get(seea){
+
+   return appliedJobs.map(f=>{
+     return   jobs.find(d=>{
+           return f.job_id ==d.id && f.seeker_id == seea   && f  //,console.log(  f.job_id ==d.id && f.seeker_id == seea     );
+        })
+        
+    })
+    
+}
+
+console.log("122",get(1000));
+
+
+//////////////////////
+let prov=1002;
+
+let dd = function getj(prov){
+    return blockedSeekers.filter((d)=>{
+        
+            return d.seekerId==prov //, console.log(d.seekerId==prov);
+        
+    })
+}
+//console.log("getJobsByeker",dd(1002));
+
+let aa = dd(prov)
+console.log(aa);
+
+let jobs1 = jobs.filter((c)=>{
+   return aa.some((b)=>{
+       return c.provider_id == b.providerId //, console.log();
+    })
+})
+
+let cons = function getJobsBySeeker(prov){
+    return blockedJobs.filter((x)=>{
+         
+            return x.seeker_id ==prov   //, console.log(x.seeker_id ==prov);
+                 //, console.log( y.id!==x.job_id && x.seeker_id!==prov&& y  );
+    })
+    }
+let aka = cons(prov)
+console.log(aka);
+
+let job100 = jobs.filter((c)=>{
+   return aka.some((w)=>{
+        return c.id ==w.job_id //,console.log(c.id ==w.job_id);
+    })
+})
+console.log(job100);
+
+// console.log(cons(aka));
+// console.log(aka);
+// console.log("getJobsBySeeker",cons(1001));
+console.log(jobs1);
+
+let blockked = jobs1.concat(job100)
+console.log("blocked",blockked);
+
+
+getjobs = jobs.filter((x)=>{
+    return blockked.every((y)=>{
+        return x.id !==y.id  //,console.log( x.id !==y.job_id );
+    })
+})
+
+console.log("getJobsBySeeker",getjobs);
+
+
+
+
+
+
+
+//console.log(geta(1002));
+
+
+// function getjobse(pro){
+//     return blockedJobs.map((x)=>{
+//         return blockedSeekers.find((c)=>{
+//             return jobs.find((d)=>{
+//                 return x.seeker_id == c.seekerId && x.seeker_id == pro && jobs
+
+//             })
+//         })
+//     })
+
+// }
+
+// console.log("325",getjobse(1002));
+
+
+
+// function  getsee(see){
+//     return appliedJobs.map((s)=>{
+//         return jobs.find((d)=>{
+//               //,console.log(s.job_id == d.id  && s.seeker_id == see);
+        
+//               return s.job_id == d.id  && s.seeker_id == see &&  d //, console.log(s.seeker_id)
+             
+//             })
+//     })
+
+// }
+
+// console.log(getsee(1000));
+
+
+
+// function getApplidJobs (provide){
+//     // jobs.filter((x)=>{
+//     //      appliedJobs.map((y)=>{
+//     //         return x.job_id==y.provider_id
+//     //     })
+//     // })
+//     console.log(provide);
+
+    
+//     return provider.filter((z)=>{
+
+//     //    console.log(z.job_id);
+//     //    console.log(provide);
+//          //return z.job_id==provide
+//     //     console.log(z.job_id);
+        
+//         return z.id == provide
+        
+      
+//     })
+// }
+
+
+// console.log("applied jobs",getApplidJobs(101));
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

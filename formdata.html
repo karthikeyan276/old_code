@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form data</title>
+</head>
+<body>
+
+
+    <script>
+   let text = '{"employees":[' +
+'{"firstName":"karthi","lastName":"keyan" },' +
+'{"firstName":"parthiban","lastName":"g" },' +
+'{"firstName":"jyothis","lastName":"kumar" }]}';
+
+const obj = JSON.parse(text);
+
+console.log(obj.employees[1].firstName+"  " + obj.employees[1].lastName);
+
+let user = {
+    name:1,
+    age :26,
+    isUser:undefined,
+    course:12,
+    wifi:1000
+}
+let json = JSON.stringify(user);
+
+console.log(typeof json);
+
+console.log(json);
+///
+console.log(JSON.stringify([new Number(12),new String(undefined),new Boolean(true)]));
+
+function replace(key,value){
+    if(typeof value === "string"){
+        
+        return null
+    }
+    return value
+}
+
+let example = {Found:"remove",model:"all",Hours:12,tansport:'bus',od:5};
+
+
+console.log(JSON.stringify(example,replace));
+
+let Original = [{
+
+
+MobileName: "ddd",
+Price: 45000,
+AvailableQuantity: 0
+},
+{
+MobileName: "aaaa",
+Price: 75000,
+AvailableQuantity: 5
+}]
+
+function rr(MobileName,value){
+    if(MobileName ==="aaa"){
+        return null
+    }
+    return "null"
+}
+console.log(JSON.stringify(Original,rr));
+
+
+
+    </script>
+    
+</body>
+</html>

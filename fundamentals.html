@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 3</title>
+</head>
+<body>
+    <script>
+
+
+//task 10 
+
+// function generatePyramid() {
+//     var totalNumberofRows = 5;
+//     var output = '';
+//     for (var i = 1; i <= totalNumberofRows; i++) {
+//         for (var j = 1; j <= i; j++) {
+//             output += j + '  ';
+//         }
+//         console.log(output);
+//         output = '';
+//     }
+// } generatePyramid();
+//         function numberr(n)
+// {
+// 	n = n + "";
+
+//     console.log(n);
+// 	return n.split("").reverse().join("");
+//     console.log(join);
+// }
+// console.log(Number(numberr(1234567)));
+
+// const num = 580212;
+// const reverse = (num) => parseInt(String(num).split("").reverse().join(""));
+// console.log(reverse(num));
+
+
+// let str = "Fast and furious";
+
+
+// for(ad of str) {
+//     if(vowels.includes(ad))
+//     {
+//         Counter++
+//     }
+// }
+// console.log(Counter);
+
+let str = "KAIthik";
+function vowels(str22) {
+		
+		let vow = 0,
+		cons = 0;
+	
+
+		// str22.length() function to count number of
+		// character in given string.
+		for (let i = 0; i < str22.length; i++) {
+		let ch = str22[i];
+    //console.log(str[0]);
+
+	
+    
+
+			if (ch == "a" || ch == "e" || ch == "i" ||
+			ch == "o" || ch == "u" || ch == "A" || ch == "E" || ch == "I" ||
+			ch == ")" || ch == "U")
+			vow++;
+			else cons++;
+		 
+		}
+		console.log("Vowels: " + vow );
+		console.log("Consonant: " + cons );
+		
+	}
+	vowels(str);
+
+
+
+const geta = (str11)=>{
+  const vowels = /[aeiou,AEIOU]/gi;
+  const pattern = /(?![aeiou])[a-z]/gi;//gi mean global ignore uppercase use A-Z
+
+  const vowel = str11.match(vowels);
+  const constt = str11.match(pattern);
+  console.log(`Vowels are ${vowel}  non vowel  ${constt}`);
+}
+
+geta("kArthSieE");
+
+
+
+
+
+
+//task 2
+let number,first,remining = 0;
+
+number=parseInt(123);
+//console.log(number);
+
+while(number>0){
+    first=number%10;
+   //console.log(first);
+    
+    remining=remining*10+first;
+    //console.log(remining);
+    number=parseInt(number/10);
+}
+console.log(remining);
+
+//PrimeNumber
+
+
+            //prime number
+
+        // for(var i = 2; i<=100;i++){
+        //     for(var j = 2; j<i;j++) 
+        //     {       
+        //         if(i % j == 0)
+        //         {
+        //             console.log("Not prime  number",i);
+        //            break;
+        //         }
+        //     }
+        //     if(i == j){
+        //         console.log(" Prime Numbers",j);
+               
+        //     }
+        // }
+
+
+                //task 4
+          //Recursion  function call itself its called as recursion called array
+             let facto = function(fact){
+                 if(fact==0){
+                     return 1;
+                 }else{
+                     return fact * facto(fact-1);
+                 }
+             }
+
+             console.log(facto(4));
+
+             // task 5
+
+             
+function reves(str) {
+
+// empty string passing
+let stri = "";
+for (let i = str.length - 1; i >= 0; i--) 
+   
+{
+    stri += str[i];
+    console.log(stri);
+}
+return stri;
+}
+
+
+const string = "karthi";
+
+const result = reves(string);
+console.log(result);
+
+//task 5
+function charAt(string,index){
+
+return string[index]||"";
+}
+function sliceAtFirst(string=""){
+
+let char="";
+
+for(let i=0;i<string.length;i++){
+
+   if(i!==0){
+
+       char +=string[i]
+
+   }
+}
+return char;
+
+}
+
+function reverse(string){
+
+if(string!==""){
+
+    return reverse(sliceAtFirst(string))+charAt(string,0)
+
+}
+
+return ""
+
+}
+console.log(reverse("this is string"));
+
+//task 5 another method
+
+function rever(str,len){
+  if(len ==str.length){
+    return;
+
+  }
+  rever(str,len+1);//str karthke, 87654321
+
+ 
+  document.write(str[len]);
+ // console.log(str[len]);
+  
+}
+
+let name = "karthike";
+
+rever(name,0)
+
+
+
+
+             function reverse(str2){
+  //console.log("qwe",str2);
+  if(str2.length <= 1){
+      return str2;  
+  }  
+
+  else { //console.log(str2);//substring starts (0,8 )means its stated at 
+      return str2.charAt(str2.length - 1) +  reverse(str2.substring(0, str2.length - 1)); 
+
+  }  
+}
+console.log(reverse("karthi"));
+//
+
+let nameed = "kkarthi"
+
+function slice(num1,num2,num3){
+
+let outt = "";
+for(let k=num2;k<num3;k++){
+  outt+=num1[k]
+}
+return outt
+
+}
+console.log(slice("karthi",0,3));
+
+function char(w,j){
+
+return w.slice(j,j+1)
+}
+console.log(char("karthi",0));
+
+ function reverse(stor) {
+
+  let st = stor.slice(1,stor.length);
+
+        //console.log(stor);
+
+        if (stor === "") {
+            //console.log(stor);
+          return "";
+
+        } else 
+
+           //console.log(stor);
+
+          return reverse(st) + stor.charAt(0);
+        
+        
+      }
+     console.log(reverse("karthi keyan"));
+
+function revs(){
+let reverse = (str,str.length-1)
+  
+}
+function reves(str,len){
+  if(len ==-1)
+ return "";
+ let v = str.charAt(len) + reverse(str,len-1);
+  
+}
+console.log(reverse("hell"))
+
+
+
+//task 6
+const avg = [ 20, 50, 75, 100, 115,10 ];
+let total = 0;
+
+for ( let i = 0; i < avg.length; i++ ) {
+  total += avg[i];
+
+  
+ 
+  console.log(total);//add total value 20+50
+}
+console.log(total);//total value assign
+
+console.log( total / avg.length );
+
+//task 7
+let val = [1,310 , 6000, 21212, 56012, 3, 5, 89, 32];
+let larg= val[0];//starting value
+
+
+
+for (i=0; i<=larg;i++) //console.log(i<=larg); //lessthan or equal 
+{
+    if (val[i]>larg) //console.log(val[7]);
+    {
+        larg=val[i];
+    }
+}
+console.log(larg);
+
+//task 8
+
+var i, j;
+var arr1 = [
+ [16,4, 5],//i=0
+ [10, 11, 12],//1=1// starting 0 value is 10
+ [9, 0, 1] // i=2 //starting value 9 as 0 position
+];
+var arr2 = [
+ [2, 36, 3],// i =0 j = 0 
+ [26, 5, 4],
+ [3, 3, 4]
+];
+var arr3 = [
+ [],
+ [],
+ [],
+];
+
+
+for(i=0; i<3; i++)
+{
+ for(j=0; j<3; j++)
+ {
+  arr3[i][j] = arr1[i][j] + arr2[i][j];
+  
+ // console.log(arr1[i][j]) 
+  console.log(arr3[i][j] );
+
+ }
+ 
+}
+//task 9
+
+function length(s) 
+
+
+{
+  let length = 0;
+
+  
+  while (s[length] ) //console.log(s[6] !==undefined);
+  
+   length++; 
+  return length;
+}
+
+console.log(length("karthik"));
+
+//task 10 
+
+let row = 5;//
+
+
+for(let k =0;k<=row;k++)  
+{ // k = 1 means 5-1 1is print 7 times * is print 
+  for(n=1;n<=(row-k);n++) 
+  { document.write();
+    document.write("&nbsp;");
+  }
+  for(let u =1;u<=k*2-1;u++) //document.write(u)
+  {
+    document.write("*");
+  }
+  document.write("<br/>");
+}
+
+
+//task 10 b
+
+
+
+
+    </script>
+    
+</body>
+</html>

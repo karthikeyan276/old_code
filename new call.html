@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call backk</title>
+</head>
+<body>
+    <script>
+        let traffic_is_low_area = false;
+
+        let traffic = (time , work) =>{
+   return new Promise((resolve,reject) =>{
+        if(traffic_is_low_area){
+            setTimeout(()=>{
+                resolve(work())
+            },time)
+            
+        }
+        else{
+            setTimeout(()=>{
+                reject(console.log("plz take highway traffic is heavey"));
+
+            },2000)
+
+        }
+
+    });
+ };
+
+ traffic(2000,() => console.log(" traffic area selected"))
+
+ .then(()=>{
+     return traffic(0000,() =>{
+         console.log( "  traffic is very high ");
+     })
+ })
+
+ .catch(()=>{
+     console.log("Highway  traffic is low.  safe drive");
+ })
+
+ 
+
+
+
+
+
+ 
+
+    </script>
+</body>
+</html>

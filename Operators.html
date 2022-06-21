@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a = 1;
+        let x = 33;
+        let y = 10;
+        var b = 2;
+document.write("a+b= ");
+result = a === b;
+document.write(result);
+document.write("<br>");
+
+document.write("x-y=");
+result = x - y;
+document.write(result);
+document.write("<br>");
+
+document.write("x * y =" );
+result = x * y;
+document.write(result);
+document.write("<br>");
+
+document.write("x / y = ");
+result = x / y ;
+document.write(result);
+document.write("<br>");
+
+
+document.write("x % y=");
+result = x % y;
+document.write(result);
+document.write("<br>");
+
+document.write("x ** y=");
+result = x ** y;
+document.write(result);
+document.write("<br>");
+
+x = ++x;
+document.write("x =  increament    ");
+result = ++x;
+document.write(result);
+document.write("<br>");
+
+y = --y;
+document.write("y = decrement      ");
+result = --y;
+document.write(result);
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+
+
+        //    var v = 1;
+        //    var n = 11;
+
+        //     document.write("(a && b) = ");
+        //     result = (a && b);
+        //     document.write(result);
+        //     document.write("<br>");
+
+        //     document.write("(n || v) = ");
+        //     result = (n || v);
+        //     document.write(result);
+        //     document.write("<br>");
+
+           
+           //logical operators
+
+           let codeskill = true;
+           let explain = true;  
+
+           let canditate = codeskill || explain 
+
+           let manager = !canditate
+
+           document.write("canditate:    " + canditate  ) ;
+           document.write("manager"    + manager);
+
+
+           //Bitwise Operators
+
+const readPermisson = 4;
+
+const writePermission = 2;
+
+const executePermission = 1;
+
+let myPermission = 0;
+
+myPermission = myPermission | readPermisson | 
+writePermission;
+
+let message = (myPermission & readPermisson) ? 'yes' : 'no';
+document.write("bitwise      "   +           message);
+
+    </script>
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+    function tk(){
+
+for(let  a=1; a<=8; a++){
+
+   setTimeout(()=>{
+
+       console.log(a)
+
+   },a*2000)
+
+}
+
+}
+
+tk();
+    //setTimeout set timeout for any funtion delay run 
+//  console.log("I");
+//  console.log("eat");
+
+//  setTimeout(() =>{
+//      console.log("ice cream");
+//  },3000);
+
+//  console.log("with");
+
+//  console.log("spoon");
+
+//setTimeout (()=>{},1000); syntax for setTimeout
+
+//  let Brand =(Brand_name,call_production)=>{
+//     setTimeout(() =>{
+//         console.log(`${stocks.Brand[Brand_name]} was selected`);
+//         call_production();
+//     }, 2000);
+     
+//  };
+
+//  let production = () =>{
+//      setTimeout(()=>{
+//          console.log("expected ");
+//      },0000);
+//      setTimeout(()=>{
+//          console.log("delivery started");
+//      },2000);
+//  }
+
+//  Brand(0,production);
+
+//csllback(){
+//     function test (slow,callback){
+//   console.log("test " + slow)
+  
+// }
+
+// function run(){
+//    console.log("hy");
+// }
+
+// test("ok",run)
+
+let stocks = {
+    brand:["BMW" , "BENZ" , "ROLLS" , "FIAT"] ,
+    model:["I 8" , "x series" , "M series"],
+    price:["low to high " , "high to low"],
+    year:["2020" , "2019" ,"2022"]
+};
+ 
+
+
+
+ let is_showroom_open = true; 
+
+
+ let order = (time , work) =>{
+   return new Promise((resolve,reject) =>{
+        if(is_showroom_open){
+            setTimeout(()=>{
+                resolve(work())
+            },time)
+            
+        }
+        else{
+            setTimeout(()=>{
+                reject(console.log("showroom closed"));
+
+            },4000)
+
+        }
+
+    });
+ };
+ 
+ order(2000,() => console.log(`${stocks.brand[0]} was selected`))
+
+ .then(()=>{
+     return order(2000,() =>{
+         console.log(`${stocks.model[0]} was selected`);
+     })
+ })
+
+ .then(()=>{
+     return order(1000,() =>{
+         console.log(`${stocks.price[1]} was selected`);
+     })
+ })
+ .then(()=>{
+     return order(1000,() =>{
+         console.log(`${stocks.year[2]} was selected`);
+     })
+ })
+ .then(()=>{
+     return order(2000,() => console.log("get auth"));
+
+ })
+
+ 
+
+ .then(()=>{
+     return order(2000,() => console.log("conform"));
+ })
+
+ .then(()=>{
+     return order (3000,()=> console.log("delivey started"));
+ })
+
+ .catch(()=>{
+     console.log("customer left");
+ })
+
+ .finally(()=>{
+     setTimeout(()=>{
+        console.log("Showroom are closed");
+
+     },2000)
+ });
+
+
+ //async its doesnot wait for any one its indepentant all functions are same way run
+
+    </script>
+</body>
+</html>
